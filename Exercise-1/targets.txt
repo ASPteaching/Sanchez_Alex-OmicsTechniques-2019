@@ -1,0 +1,13 @@
+sampleName Genotype Temperature Replicate Color
+GSM2696488	WT RoomTemp rep1 2
+GSM2696489	WT RoomTemp rep2 2
+GSM2696490	WT RoomTemp rep3 2
+GSM2696491	KO RoomTemp rep1 3
+GSM2696492	KO RoomTemp rep2 3
+GSM2696493	KO RoomTemp rep3 3
+GSM2696494	WT ColdTemp rep1 4
+GSM2696495	WT ColdTemp rep2 4
+GSM2696496	WT ColdTemp rep3 4
+GSM2696497	KO ColdTemp rep1 5
+GSM2696498	KO ColdTemp rep2 5
+GSM2696499	KO ColdTemp rep3 5

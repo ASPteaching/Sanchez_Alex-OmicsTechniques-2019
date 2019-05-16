@@ -1,0 +1,58 @@
+---
+title: "Exploratory analysisi of a GEO dataset"
+author: "Alex Sanchez"
+date: "May 15, 2019"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+What this exercise is about
+
+# Summary
+
+This study entitled 'Wild type and Zbtb7b knockout mouse brown adipose tissue' was done using mice and expression microarrays.
+
+The following description was given: *Zbtb7b is a zinc finger and BTB domain containing transcription factor that activates the thermogenic gene program during brown and beige adipocyte differentiation. Zbtb7b interacts with the long noncoding RNA Blnc1 and hnRNPU to form a ribonucleoprotein transcriptional complex. We used microarray to determine how Zbtb7b regulates brown fat gene expression at ambient room temperature and following cold exposure*
+ 	
+## Experimental design: 
+
+Wild type and Zbtb7b knockout mice of 10 weeks of age were kept at ambient room temperature (22C) or following cold exposure at 4C for 4 hrs. Brown adipose tissue was harvested for total RNA isolation and microarray analysis.
+ 	
+## Citation(s)	
+
+Li S, Mi L, Yu L, Yu Q et al. Zbtb7b engages the long noncoding RNA Blnc1 to drive brown and beige fat development and thermogenesis. Proc Natl Acad Sci U S A 2017 Aug 22;114(34):E7111-E7120. PMID: 28784777
+
+# Data description
+
+We have two files:
+
+- The *targets* file
+- The *expression matrix* file
+
+```{r readTargets}
+targets <- read.csv("targets.txt", sep="")
+expressions <- read.delim("GSE100924_expressions.txt", 
+                           row.names=1)
+```
+
+```{r}
+show(targets)
+```
+
+```{r}
+dim(expressions)
+summary(expressions)
+```
+
+```{r}
+boxplot(expressions, col=targets$Color)
+```
+
+
